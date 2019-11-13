@@ -1,1 +1,312 @@
-/* You can add global styles to this file, and also import other style files */
+@import "assets/font/font"
+@import "resources/sass/variables"
+html
+  background-color: #fff
+  font-size: 16px
+  -moz-osx-font-smoothing: grayscale
+  -webkit-font-smoothing: antialiased
+  min-width: 300px
+  overflow-x: hidden
+  overflow-y: scroll
+  text-rendering: optimizeLegibility
+  box-sizing: border-box
+
+body
+  background: url("resources/images/background.jpg")
+  background-size: cover
+body, html
+  margin: 0
+  padding: 0
+  height: 100%
+  width: 100%
+
+footer, section
+  display: block
+
+
+body, button, input, select, textarea
+  font-family: Roboto, sans-serif
+
+
+body
+  color: #4a4a4a
+  font-size: 1em
+  font-weight: 400
+  line-height: 1.5
+
+
+a
+  color: #3273dc
+  cursor: pointer
+  text-decoration: none
+
+
+a:hover
+  color: #363636
+
+
+img
+  height: auto
+  max-width: 100%
+
+
+input[type=checkbox], input[type=radio]
+  vertical-align: baseline
+
+
+ul
+  list-style: none
+
+
+button, input, select, textarea
+  margin: 0
+
+*, ::after, ::before
+  box-sizing: inherit
+
+
+.top-nav
+  display: none
+  top: 0
+  left: 0
+  position: fixed
+  right: 0
+  z-index: 30
+  background: $top-nav-background
+  color: $top-nav-color
+
+  .nav-brand
+    align-items: center
+    display: flex
+    flex-shrink: 0
+    min-height: 3.25rem
+
+    .nav-item
+      color: $top-nav-color
+      padding: 0.5rem 0.75rem
+
+    .burger
+      color: $top-nav-color
+      cursor: pointer
+      display: block
+      height: 3.25rem
+      position: relative
+      width: 3.25rem
+      margin-left: auto
+
+      span
+        background-color: $top-nav-color
+        display: block
+        height: 1px
+        left: calc(50% - 8px)
+        position: absolute
+        transform-origin: center
+        transition-duration: 86ms
+        transition-property: background-color, opacity, transform
+        transition-timing-function: ease-out
+        width: 16px
+
+        &:nth-child(1)
+          top: calc(50% - 6px)
+
+        &:nth-child(2)
+          top: calc(50% - 1px)
+
+        &:nth-child(3)
+          top: calc(50% + 4px)
+
+      &.is-active
+        span
+          &:nth-child(1)
+            transform: translateY(5px) rotate(45deg)
+
+          &:nth-child(2)
+            display: none
+
+          &:nth-child(3)
+            transform: translateY(-5px) rotate(-45deg)
+
+.side-nav
+  background: $side-nav-background
+  padding-right: 0
+  position: fixed
+  left: 0
+  bottom: 0
+  top: 0
+  width: 180px
+  z-index: 2
+
+  .menu
+    height: 100%
+    width: 100%
+
+    ul.menu-list
+      padding: 0
+
+      li
+        a
+          padding: 12px
+          border-radius: 0
+
+          &.is-active
+            background: $menu-item-hover-background-color
+            color: $menu-item-hover-color
+
+      .profile-img-container
+        margin-bottom: 2em
+
+        img
+          border-radius: 50%
+          display: block
+          height: auto
+
+  &.show-mobile
+    display: block
+
+    .profile-img-container
+      img
+        display: none
+
+.main-content
+  padding: 15px 15px 15px 195px
+
+  .section-title
+    width: 100%
+    background: $section-title-background
+    color: $section-title-color
+    padding: 1px 40px
+    text-transform: uppercase
+
+    h3
+      font-size: 1.9rem
+      line-height: 1.212rem
+      font-weight: 100
+
+.skills-section
+  .columns
+    .column
+      .card
+        height: 100%
+
+label
+  font-weight: 300
+
+
+.input,
+.textarea,
+.select select
+  &:focus
+    border-width: 1px !important
+
+p.control
+  margin-top: 14px
+
+// Each section to have 100% viewport height
+section
+  min-height: 100vh
+
+.section-intro
+  padding-bottom: 20px
+  padding-top: 20px
+  color: #42497b
+  padding-left: 35px
+  font-size: 1.2em
+
+ul.online-presence-menu
+  li
+    padding: 20px
+
+    a
+      color: teal
+
+.button.form-button
+  width: 30%
+
+.footer
+  width: 100%
+  box-shadow: 6px -2px 2px 0px #f3f0f0
+  text-align: center
+  padding: 15px
+
+  p
+    color: $footer-color
+
+    a
+      color: $footer-color
+      padding-left: 10px
+      padding-right: 10px
+      text-decoration: underline
+
+
+@media screen and (max-width: 768px)
+  .top-nav
+    display: block
+  .side-nav
+    display: none
+    margin-top: 32px
+  .main-content
+    padding: 10px !important
+    margin-top: 32px
+
+    .section-title
+      text-align: center
+
+      h3
+        font-size: 1.3rem
+
+    .section-intro
+      padding-bottom: 5px
+      padding-top: 3px
+      color: #34374c
+      font-size: 1.2em
+      text-align: justify
+      padding-left: 0
+  .footer
+    p
+      a
+        padding: 0
+
+
+//  ICONS
+[class^="fa-"],
+[class*=" fa-"]
+  font-family: 'icon-font', serif
+  font-style: normal
+  font-weight: normal
+  line-height: 1em
+  display: inline-block
+  text-decoration: inherit
+  width: 1em
+  margin-right: .2em
+  text-align: center
+
+.fa-star:before
+  content: '\e800'
+
+.fa-th-large:before
+  content: '\e801'
+
+.fa-mail:before
+  content: '\e802'
+
+.fa-location:before
+  content: '\e803'
+
+.fa-check:before
+  content: '\e804'
+
+.fa-link-ext:before
+  content: '\f08e'
+
+.fa-twitter:before
+  content: '\f099'
+
+.fa-github-circled:before
+  content: '\f09b'
+
+.fa-github:before
+  content: '\f113'
+
+.fa-envelope-open:before
+  content: '\f2b7'
+

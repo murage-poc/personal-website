@@ -1,0 +1,306 @@
+<div class="top-nav">
+    <div class="nav-brand">
+        <div class="nav-item">
+            Murage M
+        </div>
+        <div class="burger" (click)="toggleSideMenu= !toggleSideMenu" [ngClass]="{'is-active':toggleSideMenu}">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</div>
+<div class="side-nav" [ngClass]="{'show-mobile':toggleSideMenu}">
+    <nav class="menu">
+        <ul class="menu-list">
+            <li>
+                <div class="profile-img-container">
+                    <img src="https://avatars3.githubusercontent.com/u/25152892?s=200&v=4" alt="">
+                </div>
+            </li>
+            <li>
+                <a routerLink="/" fragment="home" [class.is-active]="isActive== ('home' ||null)">
+                    <span class="fa fa-location">
+
+                </span> About </a>
+            </li>
+            <li>
+                <a routerLink="/" fragment="skills" [class.is-active]="isActive=='skills'">
+                    <span class="fa fa-star"></span> Skills
+                </a>
+            </li>
+
+            <li>
+                <a target="_blank" href="https://labskenya.com/projects?developer=murage" rel="noopener">
+                    <span class="fa fa-th-large"></span>
+                    Projects
+                    <span class="fa fa-link-ext"></span>
+
+                </a>
+            </li>
+            <li>
+                <a routerLink="" fragment="contact" [class.is-active]="isActive=='contact'">
+                    <span class="fa fa-envelope-open"></span>
+                    Get in touch</a>
+            </li>
+        </ul>
+
+    </nav>
+</div>
+<div id="home">
+    <div class="main-content">
+        <section class="home">
+            <h1>Hello</h1>
+            <h3>I am <span>Murage M </span>, a full-stack developer</h3>
+            <p>I transform complex system solution ideas into simple real-world applications</p>
+        </section>
+
+        <section id="skills" class="skills-section">
+            <div class="section-title">
+                <h3>My skills overview</h3>
+            </div>
+            <div class="section-intro">
+                <p>With over 5 years of experience in building applications for different clients, I have
+                    specialized
+                    in:</p>
+            </div>
+            <div class="columns is-multiline">
+                <div class="column is-4">
+                    <div class="card">
+                        <div class="card-content">
+                            <h4> PHP & Laravel </h4>
+                            <p>
+                                PHP provides simple way to hit the ground running as its supported by many hosting
+                                providers.
+                                Laravel framework provides an elegant way to shun out a website in minute due to its
+                                robustness.
+                                I use laravel framework for small applications which do not require heavy backend
+                                processing.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-4">
+                    <div class="card">
+                        <div class="card-content">
+                            <h4> Python & Django </h4>
+                            <p>
+                                Where a robust and easily scalable web application is required, Django framework in
+                                my
+                                tool
+                                of
+                                choice
+                                as it faster as compared to Laravel and scales well in complicated enterprise
+                                applications.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-4">
+                    <div class="card">
+                        <div class="card-content">
+                            <h4> Angular {{'{' }} HTML,SASS & TYPESCRIPT {{'}'}} </h4>
+                            <p>
+                                Angular is my tool of choice while working on frontend as it is easy to maintain,
+                                has a
+                                simplified
+                                unit
+                                testing,
+                                and is easy to read. In addition, it follows an MVC approach which I find it easy to
+                                work
+                                with
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-4">
+                    <div class="card">
+                        <div class="card-content">
+                            <h4> Node JS </h4>
+                            <p>
+                                I use Node Js runtime where a web applications don't require heavy processing on the
+                                backend,
+                                and also because Javascript is very simple.
+                                I also use Node Js runtime to build desktop application where I embed a lightweight
+                                browser
+                                using
+                                <a href="https://github.com/mimidotsuser/webview" rel="noopener" target="_blank">mini web view
+                                    plugin </a> (I
+                                maintain
+                                the
+                                plugin)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-4">
+                    <div class="card">
+                        <div class="card-content">
+                            <h4> MySQL & Amazon DynamoDB </h4>
+                            <p>
+                                MySql is powerful relational database. Where client application requires persistence
+                                structure
+                                data
+                                storage,
+                                I deploy MySQl as it is easy to use and deploy.
+                                Amazon DynamoDB has been easy go solution where data is unstructured and simplicity
+                                is
+                                required.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column is-4">
+                    <div class="card">
+                        <div class="card-content">
+                            <h4> Microsoft Graph </h4>
+                            <p>
+                                MS Graph unlocks the power of Microsoft Cloud service resources.
+                                Using MS Graph, I have extended the power offered by O365 application to custom
+                                hosted
+                                client
+                                applications
+                                which some are exposed to the public using normal PHP or Node Js platform.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-4">
+                    <div class="card">
+                        <div class="card-content"><h4> SharePoint + O365 </h4>
+                            <p>
+                                I have worked with both on-premise and online SharePoint ranging from custom
+                                branding of
+                                sharepoint
+                                sites
+                                to building other business automation solutions.
+                                I have also done integration of SharePoint with Microsoft Dynamics Nav using
+                                Microsoft
+                                Flow.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-4">
+                    <div class="card">
+                        <div class="card-content">
+                            <h4> MS Power BI </h4>
+                            <p>
+                                Data visualization is key to every business for better business decisions.
+                                Using the Microsoft Power Business Intelligence platform,
+                                I have successfully been able to transform client business applications data into
+                                simple
+                                reports
+                                &
+                                dashboards.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-4">
+                    <div class="card">
+                        <div class="card-content">
+                            <h4> Java </h4>
+                            <p>
+                                For desktop applications where multiple platform just be supported, Java language is
+                                my
+                                tool
+                                of
+                                choice
+                                as
+                                its modular, simple to use and reusable.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="contact">
+            <div class="columns">
+                <div class="column is-5">
+                    <div class="section-title">
+                        <h3>Online presence</h3>
+                    </div>
+                    <ul class="online-presence-menu">
+                        <li>
+                            <a href="http://github.com/mimidotsuser" target="_blank" rel="noopener">
+                                <span class="fa fa-github"></span>@mimidotsuser</a>
+                        </li>
+                        <li>
+                            <a href="http://twitter.com/bot_illegal" target="_blank" rel="noopener">
+                                <span class="fa fa-twitter"></span> @mimidotsuser</a>
+                        </li>
+                        <li>
+                            <a href="mailto:murage@labskenya.com" target="_blank" rel="noopener">
+                                <span class="fa fa-mail"></span> murage@labskenya.com</a>
+                        </li>
+                    </ul>
+
+                </div>
+                <div class="column is-7">
+                    <div class="section-title">
+                        <h3>Contact me</h3>
+                    </div>
+                    <div class="section-intro">
+                        <p>
+                            I am always interested in freelance opportunities.
+                            However, if you have other request or question, don’t hesitate to contact me.
+                        </p>
+                    </div>
+                    <form class="columns is-multiline">
+                        <div class="field column is-6">
+                            <label for="name">Name</label>
+                            <p class="control">
+                                <input type="text" class="input" id="name" required>
+                            </p>
+                        </div>
+                        <div class="field column is-6">
+                            <label for="email">Email</label>
+                            <p class="control">
+                                <input type="text" class="input" id="email" required>
+                            </p>
+                        </div>
+                        <div class="field column is-6">
+                            <label for="mobile">Mobile</label>
+                            <p class="control">
+                                <input type="tel" class="input" id="mobile" placeholder="optional">
+                            </p>
+                        </div>
+                        <div class="field column is-6">
+                            <label for="reason">Contact reason</label>
+                            <p class="control is-fullwidth select">
+                                <select id="reason">
+                                    <option>General</option>
+                                    <option>Hire me</option>
+                                    <option>Need a Meet</option>
+                                </select>
+                            </p>
+                        </div>
+
+                        <div class="field column is-12">
+                            <label for="message">Message</label>
+                            <p class="control">
+                                <textarea id="message" rows="2" class="textarea"></textarea>
+                            </p>
+                        </div>
+                        <div class="field column is-12 has-text-centered">
+                            <button class="button is-primary form-button" disabled>
+                                <span class="fa fa-check"></span> send
+                            </button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer class="footer">
+
+        <p>
+            <a href="https://labskenya.com/policy" target="_blank" rel="noopener">Privacy Policy</a>
+            All right reserved {{today|date:'Y'}} murage
+    </footer>
+</div>
