@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {ActivatedRoute} from "@angular/router";
+import {ActivatedRoute, NavigationEnd, Router} from "@angular/router";
 import {share} from "rxjs/operators";
 
 @Component({
@@ -13,11 +13,21 @@ export class HomeComponent implements OnInit {
     isActive = 'home';
     today = new Date();
 
-    constructor(private route: ActivatedRoute) {
+    constructor(private route: ActivatedRoute, private router: Router) {
     }
 
     ngOnInit() {
-        this.route.fragment.pipe(share()).subscribe((v) => this.isActive = v||'home');
+        this.loadBackgroundImage();
+
+        this.route.fragment.pipe(share()).subscribe((v) => this.isActive = v || 'home');
+        this.router.events.subscribe((evt) => {
+            if (evt instanceof NavigationEnd) {
+                this.toggleSideMenu = false;
+            }
+        });
     }
 
+    loadBackgroundImage(){
+        document.body.style.backgroundImage="url(assets/images/background.jpg)"
+    }
 }
