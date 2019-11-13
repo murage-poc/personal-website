@@ -163,6 +163,8 @@ button, input, select, textarea
 
   &.show-mobile
     display: block
+    animation: fadeIn 2s
+    -webkit-animation: fadeIn 2s
 
     .profile-img-container
       img
@@ -311,3 +313,14 @@ ul.online-presence-menu
 .fa-envelope-open:before
   content: '\f2b7'
 
+@-webkit-keyframes fadeIn
+  from
+    opacity: 0
+  to
+    opacity: 1
+
+@keyframes fadeIn
+  from
+    opacity: 0
+  to
+    opacity: 1
