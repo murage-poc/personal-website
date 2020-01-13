@@ -15,6 +15,7 @@ html
 body
   background-size: cover
   background-color: #18232c
+  background-blend-mode: soft-light
 body, html
   margin: 0
   padding: 0
@@ -85,6 +86,8 @@ button, input, select, textarea
     .nav-item
       color: $top-nav-color
       padding: 0.5rem 0.75rem
+      font-size: 21px
+      text-transform: uppercase
 
     .burger
       color: $top-nav-color
@@ -164,8 +167,8 @@ button, input, select, textarea
 
   &.show-mobile
     display: block
-    animation: fadeIn 2s
-    -webkit-animation: fadeIn 2s
+    animation: fadeIn 1.4s
+    -webkit-animation: fadeIn 1.4s
 
     .profile-img-container
       img
@@ -180,6 +183,8 @@ button, input, select, textarea
     color: $section-title-color
     padding: 1px 40px
     text-transform: uppercase
+    font-family: 'Kelly Slab', cursive
+
 
     h3
       font-size: 1.9rem
@@ -245,6 +250,7 @@ ul.online-presence-menu
 @media screen and (max-width: 768px)
   .top-nav
     display: block
+    font-family: 'Kelly Slab', cursive
   .side-nav
     display: none
     margin-top: 32px
